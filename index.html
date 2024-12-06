@@ -5,66 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InCySe Hackathon Webpage</title>
     <link rel="stylesheet" href="styles.css">
-   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
-        <div class="logo"></div>
-        <img src="src/InCySe-removebg-preview.png" alt="InCySe Logo" height="160"> <!-- Reduced height from 50 -->
-
+        <div class="logo">
+            <img src="src/file.png" alt="InCySe Logo" height="80">
         </div>
         <ul>
-            <li><a href="#objectives">InCySe Objectives</a></li>
-            <li><a href="#executive-plan">Executive Plan</a></li>
-            <li><a href="#registration">Registration</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#details">Details</a></li>
             <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
     </nav>
-    
-    <section id="image">
-        <h2>ARE YOU EXITED!</h2>
-        <p>Join the InCySe Hackathon and Shape the Future of Cybersecurity.</p>
-    </section>
 
-    <section id="objectives">
+    <!-- Hero Section -->
+    <header>
+        <div class="overlay">
+            <h1 class="typing">InCySe Hackathon</h1>
+            <p>Industrial Cybersecurity in a Connected World</p>
+            <a href="#registration" class="btn">Register Now</a>
+        </div>
+    </header>
+
+    <!-- Objectives Section -->
+    <section id="objectives" class="section alternate">
         <h2>InCySe Objectives</h2>
-        <p>The idea behind InCySe is two-fold. First, it is to encourage students, especially from underrepresented groups, to consider a career in industrial cybersecurity. Second, it is to impart basic working knowledge of emerging technologies such as blockchain and AI through hands-on learning facilitated by the hackathon challenges. InCySe would target high school seniors, freshman, and sophomore undergraduate students with a special emphasis on underrepresented groups with active participation from our Minority Serving Institutions (MSI) and NSF-funded programs at Oklahoma State such as OKLSAMP.</p>
+        <p>
+            Encourage students, especially from underrepresented groups, to consider a career in industrial cybersecurity. Impart knowledge of emerging technologies through hands-on learning facilitated by hackathon challenges.
+        </p>
     </section>
 
-    <section id="executive-plan">
-        <h2>Executive Plan</h2>
-        <p>The PI plans to organize three InCySe events (one for each year of the project timeline) with potential support from this project. Each InCySe event is planned to be a two-day event. On Day 1, the PI and his graduate students will organize a bootcamp/workshop to provide participants with an overview of the hackathon problem themes, rules, and regulations. This would also include mini-tutorials regarding basic AI algorithms, blockchains, SmartContracts, IPFS, as well as other platforms and tools that can be useful to tackle the hackathon challenges.</p>
-        <p><strong>Gustavo</strong> would be a vital tool for the participants to build and test their solutions in a distributed way with a minimal learning curve. Hackathon challenges would comprise predefined problem statements with accompanying datasets. Participants must uniquely leverage relevant tools and platforms from the bootcamp to solve. There will also be an open-ended challenge in which participants are free to identify a problem of their own and develop a relevant solution framework within the ambit of industrial cybersecurity.</p>
-        <p>On Day 2, the hackathon commences, and challenges would be publicly revealed. Participants have 24 hours to submit their solutions online. Group participation would be welcome and encouraged. All InCySe events would be hybrid events, and remote participation would be welcome. Coordination of the entire InCySe event would be done on Discord, including live streaming. Judging of the event and announcement of the winners would be done at the end of Day 2, with the help of a panel of judges including the PI along with active participation from industry experts.</p>
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <h2>Hackathon Overview</h2>
+        <p><strong>Duration:</strong> 1 week</p>
+        <p><strong>Mode:</strong> Hybrid (Online and Onsite)</p>
+        <p><strong>Participants:</strong> Teams of up to 2 students, mixing undergraduate and high school students.</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+            <li><i class="fas fa-check-circle"></i> Introduce cybersecurity concepts and blockchain technology.</li>
+            <li><i class="fas fa-users"></i> Foster problem-solving, teamwork, and innovation.</li>
+            <li><i class="fas fa-tools"></i> Develop practical prototypes addressing real-world challenges.</li>
+        </ul>
     </section>
 
-    <section id="registration">
-        <h2>Registration</h2>
-        <p>If you are interested in participating in the InCySe hackathon, please register using the link below:</p>
-        <a href="YOUR_REGISTRATION_FORM_LINK_HERE" target="_blank">Register Here</a>
+    <!-- Countdown Section -->
+    <section id="countdown" class="section">
+        <h2>Countdown to Hackathon</h2>
+        <div id="timer">
+            <span id="days"></span> Days 
+            <span id="hours"></span> Hours 
+            <span id="minutes"></span> Minutes 
+            <span id="seconds"></span> Seconds
+        </div>
     </section>
 
-    <section id="sponsors">
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+        <h2>Timeline</h2>
+        <ul>
+            <li><strong>March 21, 2025:</strong> Registration Opens</li>
+            <li><strong>April 2, 2025:</strong> InCySe Keynote</li>
+            <li><strong>April 4, 2025:</strong> Tutorials and Workshops</li>
+            <li><strong>April 11, 2025:</strong> Team Demonstrations and Awards</li>
+        </ul>
+    </section>
+
+    <!-- Registration Progress Section -->
+    <section id="registration-progress" class="section">
+        <h2>Registration Progress</h2>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 75%;"></div>
+        </div>
+        <p>75% spots filled!</p>
+    </section>
+
+        <!-- Details Section -->
+    <section id="details" class="section alternate">
+        <h2>Hackathon Details</h2>
+        <h3>Day 1 (Learning and Ideation)</h3>
+        <ul>
+            <li><strong>Keynote:</strong> "Securing the Future: Blockchain’s Role in Cybersecurity"</li>
+            <li><strong>Workshops:</strong></li>
+            <ul>
+                <li>Cybersecurity Basics</li>
+                <li>Blockchain Fundamentals</li>
+                <li>Hands-on Tools: Gustavo, Solidity, Python</li>
+            </ul>
+            <li><strong>Challenge Announcement:</strong> Themes and problem statements</li>
+            <li><strong>Team Formation:</strong> Ideation and collaboration</li>
+        </ul>
+        <h3>Day 2 (Demonstration and Final Presentation)</h3>
+        <ul>
+            <li><strong>Development Phase:</strong> Build solutions with mentor support</li>
+            <li><strong>Submission:</strong> Working prototype and pitch deck</li>
+            <li><strong>Presentation and Judging:</strong> Demo and Q&A</li>
+        </ul>
+    </section>
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="section">
         <h2>Sponsors</h2>
-        <p>We would like to thank our sponsors for their generous support in making the InCySe hackathon possible.</p>
-        <!-- <ul>
-            <li>Sponsor 1</li>
-            <li>Sponsor 2</li>
-            <li>Sponsor 3</li>
-            <li>Sponsor 4</li>
-        </ul> -->
+        <p>We thank our sponsors for making the InCySe Hackathon possible.</p>
         <div class="sponsor-images">
             <img src="sponsor1.jpg" alt="Sponsor 1">
             <img src="sponsor2.jpg" alt="Sponsor 2">
             <img src="sponsor3.jpg" alt="Sponsor 3">
-            <img src="sponsor4.jpg" alt="Sponsor 4">
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>For any inquiries regarding the InCySe hackathon, please contact us at: <a href="mailto:contact@incysehackathon.com">contact@incysehackathon.com</a></p>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>For inquiries, contact us at: <a href="mailto:contact@incysehackathon.com">contact@incysehackathon.com</a></p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 InCySe Hackathon. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" onclick="scrollToTop()">⬆</button>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
 </body>
 </html>
